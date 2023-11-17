@@ -6,7 +6,7 @@ function App() {
   let logo = 'SEO BLOG'
   const [postTitle, setPostTitle] = useState(['남자 옷 추천', '여자 옷 추천', '아동 옷 추천']);
   const [goodIcons, setGoodIcons] = useState(0);
-  const [post, setPost] = useState(['여자 코트 추천','뭘 꼬라바', '아동 코트 추천']);
+  const [post, setPost] = useState(['여자 코트 추천','남자 코트 추천', '아동 코트 추천']);
 
   const handleGoodClick = (e) => {
     setGoodIcons(goodIcons => goodIcons + 1);
