@@ -21,7 +21,15 @@ function App() {
     <div className="App">
       <div className='black-nav'>
         <h4 style={{ fontSize : '16px' }}>{ logo } </h4>
+
+      <div className='button-group'>
+
+        <button className='login-btn' onClick={() => {alert('로그인 버튼 클릭')}}>로그인</button>
+        <button className='sign-in-btn' onClick={() => {alert('회원가입 버튼 클릭')}}>회원가입</button>
+
       </div>
+
+    </div>
 
       <button onClick={() => {
         let copy = [...postTitle];
@@ -44,12 +52,26 @@ function App() {
         
         <h4>{postTitle[2]}</h4>
         <p>{post[2]}</p>
-
-
       </div>
+
+      <Modal />
 
     </div>
   );
+}
+
+function Modal() {
+
+  return(
+  <> 
+    <div className='modal'>
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  </>
+  )
+  
 }
 
 export default App;
