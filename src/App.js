@@ -4,7 +4,7 @@ import './App.css';
 function App() {
 
   let logo = 'SEO BLOG'
-  const [postTitle, setPostTitle] = useState(['남자 옷 추천', '여자 옷 추천', '아동 옷 추천']);
+  const [postTitle, setPostTitle] = useState(['다. 남자 옷 추천', '나. 여자 옷 추천', '가. 아동 옷 추천']);
   const [goodIcons, setGoodIcons] = useState(0);
   const [post, setPost] = useState(['남자 코트 추천','여자 코트 추천', '아동 코트 추천']);
 
@@ -22,6 +22,14 @@ function App() {
       <div className='black-nav'>
         <h4 style={{ fontSize : '16px' }}>{ logo } </h4>
       </div>
+
+      <button onClick={() => {
+        let copy = [...postTitle];
+        copy.sort();
+        setPostTitle(copy);
+      }}>
+      가나다순 정렬
+      </button>
 
       <button onClick={handleChangePost}>
         글 변경
